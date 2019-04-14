@@ -1,23 +1,36 @@
 <html>
     <head>
         <title>halo world</title>
-        <style>
-          h1 {
+
+        <link href="https://fonts.googleapis.com/css?family=Forum&amp;subset=cyrillic" rel="stylesheet">
+         <style>
+
+              h1 {
             font-size: 150%;
+            font-family: 'Forum';
           }
-          li {
-            display: inline;
-          }
-          p {
-            border: 5px solid #1DB333;
-            border-radius: 50px;
-            background-color: #5CFF82;
-            color: #B30B19;
+
+
+          body {
+  font-family: 'Forum', sans-serif;
+  }
+
+          p.fancy {
+            border: 5px solid lime;
+            border-radius: 5px;
+            background-color: brown;
+            color: #ffffff;
             margin: 0;
             margin-left: auto;
             margin-right: auto;
             width: 50%;
 
+          }
+          #heading {
+           color: green;
+          }
+           ul li {
+            border-right: 3px solid red;
           }
           strong {
             font-weight: normal;
@@ -28,28 +41,97 @@
             font-style: normal;
           }
 
-* {
-  padding: 10px
-}
+          * {
+              padding: 10px
+            }
+
+        .somelist {
+          background-color: blue;
+          color: #ffffff
+        }
+        .somelist__item {
+          display: inline-block;
+        }
+        .somelist__item_border_black {
+          border-bottom: 5px solid black;
+        }
+
+        .somelist__highlight {
+          background-color: yellow;
+          color: #000000;
+        }
+
+        .a.c {
+          color: red;
+        }
+
+        .b {
+          color: blue !important;
+        }
+        td {
+          border: 1px solid black;
+        }
+        table {
+          border-collapse: collapse;
+          border: 1px solid blue;
+        }
+        .image {
+          max-width: 5%; height: auto;
+        }
+
         </style>
+
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC&amp;subset=cyrillic" rel="stylesheet">
     </head>
     <body>
-        <h1>A Head in the Polls</h1>
+        <h1 id="heading" class="b a c">A Head in the Polls</h1>
         <p>Начинаются выборы <strong>Президента Земли</strong>, в&nbsp;предвыборной гонке участвуют <em>два</em> <nobr>кандидата-клона</nobr>. Тем временем после катастрофы на&nbsp;титановом прииске цены на&nbsp;титан взлетают вверх. Бендер становится богачом, продав своё состоящее на&nbsp;40% из&nbsp;титана тело.</p>
-  <p>В&nbsp;музее голов президент Ричард Никсон разрушает иллюзии Бендера о&nbsp;счастливой жизни без тела. Бендер пытается купить своё тело обратно, но&nbsp;Никсон опережает его. Теперь <nobr>экс-президент</nobr> может вновь участвовать в&nbsp;выборах.</p>
+  <p class="fancy">В&nbsp;музее голов президент Ричард Никсон разрушает иллюзии Бендера о&nbsp;счастливой жизни без тела. Бендер пытается купить своё тело обратно, но&nbsp;Никсон опережает его. Теперь <nobr>экс-президент</nobr> может вновь участвовать в&nbsp;выборах.</p>
   <p>Фрай, Лила и&nbsp;Бендер пробираются в&nbsp;отель &laquo;Уотергейт&raquo;, где находится Никсон, и&nbsp;пытаются похитить тело Бендера. Проснувшийся Никсон объявляет о&nbsp;своих демонических планах на&nbsp;будущее управление Землёй в&nbsp;случае своей победы. Бендер записывает его речь и&nbsp;получает своё тело в&nbsp;обмен на&nbsp;кассету.</p>
-  <p>В&nbsp;день выборов Фрай и&nbsp;Лила забывают проголосовать, и&nbsp;Никсон побеждает с&nbsp;перевесом в&nbsp;один голос. Получив новое тело боевого робота, он&nbsp;врывается в&nbsp;Белый дом.</p>
-<ul>
-  <li>Мозговые слизняки</li>
-  <li>Дебют: Джек Джонсон</li>
-  <li>Линда</li>
-  <li>Морбо</li>
+  <p class="fancy">В&nbsp;день выборов Фрай и&nbsp;Лила забывают проголосовать, и&nbsp;Никсон побеждает с&nbsp;перевесом в&nbsp;один голос. Получив новое тело боевого робота, он&nbsp;врывается в&nbsp;Белый дом.</p>
+<ul class="somelist">
+  <li class="somelist__item">Мозговые слизняки</li>
+  <li class="somelist__item">Дебют: <strong class="somelist__highlight">Джек</strong> Джонсон</li>
+  <li class="somelist__item somelist__item_border_black">Линда</li>
+  <li class="somelist__item">Морбо</li>
 </ul>
-<ol>
-  <li>Мозговые слизняки</li>
+
+<ol id="ol">
+  <li>Мозговые слизняки <img src="http://www.netlore.ru/files/Images/bs/art/11.jpg" alt="зеленая хрень" class="image" /></li>
   <li>Дебют: Джек Джонсон</li>
   <li>Линда</li>
   <li>Морбо</li>
 </ol>
+<table>
+  <thead>
+    <tr>
+      <th>Еда</th>
+      <th>Количество</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Печеньки</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>Яблоки</td>
+      <td>30</td>
+      </tr>
+    <tr>
+      <td>Конфеты</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>Сушки</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>Орехи</td>
+      <td>7</td>
+    </tr>
+  </tbody>
+  <caption>Еда на столе</caption>
+</table>
     </body>
 </html>

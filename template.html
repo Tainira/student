@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Templates</title>
+  </head>
+  <body>
+    <h1 id="heading">Hello</h1>
+    <div id="js-text">
+    </div>
+    <p>
+    <script>
+      //document.write('Some number: '+ Math.round((Math.random() * 5) + 10));
+    </script>
+    </p>
+    <script>
+      var heading = document.getElementById('heading');
+      heading.style.border = '1px solid red';
+
+      function someTemplate(name) {
+        return '<h2>Hello ' + name + '</h2>'
+          + '<p>You are very cool</p>';
+      }
+
+      const sameTemplate = name =>
+          `<h2>Hello ${name}</h2>
+          <p>You are very cool (with ES${5 + 1})</p>`;
+
+      var text = document.getElementById('js-text');
+
+      var name = prompt('What is your name');
+
+      text.innerHTML = sameTemplate(name);
+    </script>
+  </body>
+</html>

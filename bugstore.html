@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Shop</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Suranna&display=swap" rel="stylesheet">
+    <style>
+
+    h1 {
+      font-size: 400%;
+      font-family: 'Suranna';
+    }
+
+    body {
+      background-color: #FF5959;
+      font-family: "Poppins";
+      font-size: 14px;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    dt {
+      font-weight: bold;
+    }
+
+    .flex {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+  .menu__item {
+    display: inline-block;
+    padding: 30px;
+    color: white;
+  }
+
+  .menu__item__selected {
+    border-top: 5px solid white;
+    padding-top: 30px;
+  }
+
+    .counter-button {
+      border: 1px solid white;
+      color: white;
+      border-radius: 20px;
+      padding: 5px;
+      display: inline-block;
+    }
+    .counter-button__button {
+      background: none;
+      border: none;
+      color: inherit;
+      vertical-align: top;
+      font-weight: bold;
+    }
+    .add-basket {
+      background: black;
+      border: 1px solid black;
+      border-radius: 20px;
+      padding: 5px;
+      color: white;
+      font-size: 1em;
+      text-transform: uppercase;
+      vertical-align: middle;
+    }
+    .add-basket::after {
+      content: '';
+      margin-left: 5px;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-color: white;
+      background-image: url(https://placekitten.com/20/20);
+      border-radius: 50%;
+      vertical-align: middle;
+    }
+
+    .block-name {
+      color: white;
+    }
+
+    h2 {
+    transform-origin: left;
+    transform: rotate(270deg);
+    text-shadow: grey 0 0 3px;
+    color: white;
+    }
+
+    .social-web__item {
+      display: inline-block;
+    }
+
+    </style>
+  </head>
+
+  <body>
+    <nav class="top-menu flex">
+      <div class="top-menu__logo">
+        <a class="logo" href="/"><img src="icon.jpg" alt="INSECT"></a>
+      </div>
+      <div class="top-menu__search">
+        <form action="search" class="search" method="get">
+          <input name="search" placeholder="Search" type="search" />
+          <input type="submit" />
+        </form>
+      </div>
+      <div class="top-menu__menu">
+        <ul class="menu">
+          <li class="menu__item"><a href="#">Home</a></li>
+          <li class="menu__item menu__item__selected"><span>Shop</span></li>
+          <li class="menu__item"><a href="#">About</a></li>
+          <li class="menu__item"><a href="#">Basket</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <article>
+      <div class="block-name">
+        <h1>Pachyteria equestris</h1>
+        <img src="scheme.png" alt="32 mm × 12 mm">
+        <dl>
+          <dt>Locality</dt> <dd>Malaysia</dd>
+          <dt>Sex</dt> <dd>Male</dd>
+          <dt>Price</dt><dd>$5.99</dd>
+        </dl>
+
+      <span class="counter-button">
+        <button class="counter-button__button">&minus;</button>
+        1
+        <button class="counter-button__button">+</button></span>
+
+      <button class="add-basket">Add to cart</button>
+      </div>
+
+      <div class="block-pic">
+        <img src="bug.png" alt="big red & blue bug">
+      </div>
+
+      <div class="block-classification">
+        <h2 class="block-classification__heading">Classification</h2>
+          <dl class="block-classification__elements">
+            <dt>Class</dt>
+            <dd>Insecta</dds>
+            <dt>Order</dt>
+            <dd>Coleoptera</dd>
+            <dt>Family</dt>
+            <dd>Cerambicydae</dd>
+            <dt>Subfamily</dt>
+            <dd>Cerambicynae</dd>
+            <dt>Tribe</dt>
+            <dd>Callichromatini</dd>
+            <dt>Genus</dt>
+            <dd>Pachyteria</dd>
+          </dl>
+        </div>
+    </article>
+
+      <ul class="social-web">
+        <li class="social-web__item"><a href="http://pageonfacebook.com"><img src="Facebook.jpg" alt="Facebook"></a></li>
+        <li class="social-web__item"><a href="http://pageontwitter.com"><img src="Twitter.jpg" alt="Twitter"></a></li>
+        <li class="social-web__item"><a href="http://pageoninstagram.com"><img src="Instagram.jpg" alt="Instagram"></a></li>
+      </ul>
+  </body>
+</html>

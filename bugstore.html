@@ -7,7 +7,9 @@
     <link href="https://fonts.googleapis.com/css?family=Suranna&display=swap" rel="stylesheet">
   -->
     <link href="normalize.css" rel="stylesheet">
+    <link href="icono.min.css" rel="stylesheet">
     <style>
+
     h1 {
       font-size: 400%;
       font-family: 'Suranna';
@@ -16,7 +18,6 @@
     body {
       background-color: #FF5959;
       font-family: "Poppins";
-      font-size: 14px;
     }
 
     a {
@@ -28,48 +29,120 @@
       font-weight: bold;
     }
 
+    .container {
+          max-width: 900px;
+          margin: 0 auto;
+          background-color: #FF5959;
+          padding: 20px;
+          padding-top: 0;
+          position: relative;
+          z-index: 1;
+        }
+
+    body {
+          padding: 50px;
+          background-color: black;
+          position: relative;
+        }
+
+    body:before {
+          content: '';
+          display: block;
+          background-color: green;
+          width: 25%;
+          height: 50%;
+          left: 0;
+          top: 0;
+          position: absolute;
+        }
+
+    body:after {
+          content: '';
+          display: block;
+          background-color: blue;
+          width: 50%;
+          height: 100%;
+          left: 50%;
+          top: 0;
+          position: absolute;
+        }
+
     .flex {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 30px;
+        display: flex;
+        flex-wrap: wrap;
     }
 
-  .menu {
-    margin: 0;
-    padding: 0;
-  }
+    .logo__img {
+        max-width: 50%;
+    }
 
-  .menu__item {
-    display: inline-block;
-    padding: 30px;
-    color: white;
-  }
+    .top-menu__logo, .top-menu__search {
+        margin-top: 30px;
+    }
 
-  .menu__item__selected {
-    border-top: 5px solid white;
-    padding-top: 30px;
-  }
+    .search {
+          padding-right: 80px;
+          padding-left: 90px;
+          /*icono-search*/
+    }
 
-  .menu__item a:link {
+    .search__submit {
 
-  }
+    }
 
-  .menu__item a:hover {
-    background-color: green;
-  }
+    .search__submit_hidden {
+          display: none;
+    }
 
-  .menu__item a:visited {
+    .top-menu__logo__text {
+          color: white;
+          font-weight: bold;
+    }
 
-  }
+    .menu {
+      margin: 0;
+      padding: 0;
+    }
 
-  .menu__item a:active {
-    background-color: red;
-  }
+    .menu__item {
+      display: inline-block;
+      color: white;
+    }
 
-  .menu__item a:focus {
-    outline: none;
-    background: violet;
-  }
+    .menu__item__text {
+      padding: 30px;
+      font-size: 0.6em;
+      letter-spacing: 0.1em;
+    }
+
+    .menu__item__selected {
+      border-top: 5px solid white;
+    }
+
+    .menu__item a:link {
+          padding: 20px;
+    }
+
+    .menu__item a:hover {
+      background-color: green;
+    }
+
+    .menu__item a:visited {
+
+    }
+
+    .menu__item a:active {
+      background-color: red;
+    }
+
+    .menu__item a:focus {
+      outline: none;
+      background: violet;
+    }
+
+    .menu__item__cart {
+      padding-left: 40px;
+    }
 
     .counter-button {
       border: 1px solid white;
@@ -78,6 +151,7 @@
       padding: 5px;
       display: inline-block;
     }
+
     .counter-button__button {
       background: none;
       border: none;
@@ -85,6 +159,7 @@
       vertical-align: top;
       font-weight: bold;
     }
+
     .add-basket {
       background: black;
       border: 1px solid black;
@@ -95,6 +170,7 @@
       text-transform: uppercase;
       vertical-align: middle;
     }
+
     .add-basket::after {
       content: '';
       margin-left: 5px;
@@ -107,17 +183,64 @@
       vertical-align: middle;
     }
 
-
-
     .block-name {
       color: white;
-      max-width: 50%;
+      max-width: 100%;
+      padding: 20px;
+      font-size: 0.75em;
+      margin-right: -120px; /*так ли это надо???*/
+    }
+
+    .block-name dt {
+        font-weight: normal;
+      }
+
+    .block-name dd {
+        font-weight: bold;
+      }
+
+    .block-name__elements dd {
+      margin-left: 0;
+      }
+
+    .block-name__elements {
+      padding: 30px;
+      }
+
+    .block-name__list {
+
+      }
+
+    .block-name__elements__price {
+      color: #FF5959;
+      margin-left: 0;
+      }
+
+    .block-name__elements__amount {
+      font-size: 2.5em;
+      }
+
+    .block-name__img {
+      max-height: 100px; /*проценты не работают, wtf*/
+      float: left;
+      }
+
+    .block-name dt::after {
+      content:":";
+    }
+
+    .block-pic {
+      max-width: 50%; /*так ли это надо???*/
       padding: 20px;
     }
 
     .block-classification {
       position: relative;
       padding-left: 50px;
+      max-width: 50%; /*так ли это надо???*/
+      padding: 20px;
+      font-size: 1.1em;
+      color: #3F403F;
     }
 
     .block-classification dt::after {
@@ -129,28 +252,27 @@
       transform: rotate(270deg) translate(-100%, 0);
       text-shadow: white -1px 0 0, white 1px 0 0, white 0 1px 0, white 0 -1px 0 ;
       color: #FF5959;
-
       font-size: 1.8em;
-
       position: absolute;
-      left: 0;
-      top: 0;
+      letter-spacing: 0.2em;
+      left: -70%;
+      top: -12%;
+      padding: 20px;
+    }
+
+    .block-classification__elements dd {
+      margin-bottom: 1em;
+      margin-left: 0;
+    }
+
+    .social-web {
+      color: white;
     }
 
     .social-web__item {
       display: inline-block;
-    }
-
-    .search {
-
-    }
-
-    .search__submit {
-
-    }
-
-    .search__submit_hidden {
-      display: none;
+      padding-left: 20px;
+      /*как уменьшить на 50%?*/
     }
 
     .columns {
@@ -158,52 +280,6 @@
       flex-direction: row-reverse;
     }
 
-    .block-name {
-
-    }
-
-    .block-pic {
-
-
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      background-color: #FF5959;
-      padding: 20px;
-      position: relative;
-      z-index: 1;
-    }
-
-
-    body {
-      padding: 50px;
-      background-color: black;
-      position: relative;
-    }
-
-    body:before {
-      content: '';
-      display: block;
-      background-color: green;
-      width: 25%;
-      height: 50%;
-      left: 0;
-      top: 0;
-      position: absolute;
-    }
-
-    body:after {
-      content: '';
-      display: block;
-      background-color: blue;
-      width: 50%;
-      height: 100%;
-      left: 50%;
-      top: 0;
-      position: absolute;
-    }
     </style>
   </head>
 
@@ -211,7 +287,7 @@
     <div class="container">
       <nav class="top-menu flex">
         <div class="top-menu__logo">
-          <a class="logo" href="/"><img src="icon.jpg" alt="INSECT"></a>
+          <a class="logo" href="/"><img src="bugicon.png" alt="INSECT" class="logo__img"></a><div class="top-menu__logo__text">INSECT</div>
         </div>
         <div class="top-menu__search">
           <form action="search" class="search" method="get">
@@ -221,10 +297,10 @@
         </div>
         <div class="top-menu__menu">
           <ul class="menu">
-            <li class="menu__item"><a href="#">Home</a></li>
-            <li class="menu__item menu__item__selected"><span>Shop</span></li>
-            <li class="menu__item"><a href="#">About</a></li>
-            <li class="menu__item"><a href="#">Basket</a></li>
+            <li class="menu__item menu__item__text"><a href="#">Home</a></li>
+            <li class="menu__item menu__item__text menu__item__selected"><span>Shop</span></li>
+            <li class="menu__item menu__item__text"><a href="#">About</a></li>
+            <li class="menu__item menu__item__cart"><a href="#" class=icono-cart></a></li>
           </ul>
         </div>
       </nav>
@@ -232,13 +308,13 @@
       <article class="columns">
         <div class="columns__column">
           <div class="block-name">
-            <h1>Pachyteria equestris</h1>
-            <img src="scheme.png" alt="32 mm × 12 mm">
-            <dl>
-            <dt>Locality</dt> <dd>Malaysia</dd>
-            <dt>Sex</dt> <dd>Male</dd>
-            <dt>Price</dt><dd>$5.99</dd>
-            </dl>
+              <h1>Pachyteria equestris</h1>
+              <img src="bugscheme.png" alt="32 mm × 12 mm" class="block-name__img block-name__elements">
+              <dl class="block-name__list block-name__elements">
+              <dt>Locality</dt> <dd>Malaysia</dd>
+              <dt>Sex</dt> <dd>Male</dd>
+              <dt class="block-name__elements__price">Price</dt><dd class="block-name__elements__amount">$5.99</dd>
+              </dl>
 
             <span class="counter-button">
             <button class="counter-button__button">&minus;</button>
@@ -259,7 +335,7 @@
             <h2 class="block-classification__heading">Classification</h2>
             <dl class="block-classification__elements">
               <dt>Class</dt>
-              <dd>Insecta</dds>
+              <dd>Insecta</dd>
               <dt>Order</dt>
               <dd>Coleoptera</dd>
               <dt>Family</dt>
@@ -275,11 +351,14 @@
         </div>
       </article>
 
-      <ul class="social-web">
-        <li class="social-web__item"><a href="http://pageonfacebook.com"><img src="Facebook.jpg" alt="Facebook"></a></li>
-        <li class="social-web__item"><a href="http://pageontwitter.com"><img src="Twitter.jpg" alt="Twitter"></a></li>
-        <li class="social-web__item"><a href="http://pageoninstagram.com"><img src="Instagram.jpg" alt="Instagram"></a></li>
-      </ul>
+      <div align=right><ul class="social-web">
+        <li class="social-web__item"><a href="http://pageonfacebook.com" class="icono-facebook"></a></li>
+
+        <li class="social-web__item"><a href="http://pageontwitter.com" class="icono-twitter"></a></li>
+
+        <li class="social-web__item"><a href="http://pageoninstagram.com" class="icono-instagram"></a></li>
+        </ul>
+      </div>
     </div> <!-- container -->
   </body>
 </html>

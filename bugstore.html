@@ -1,4 +1,4 @@
-<!-- <!doctype html> -->
+<!doctype html>
 <html>
   <head>
     <title>Shop</title>
@@ -38,6 +38,24 @@
           position: relative;
           z-index: 1;
         }
+
+    .container::before {
+      content: '';
+
+      position: absolute;
+
+      width: 50%;
+      height: 100%;
+
+      right: 0;
+      top: 0;
+
+      background-color: #FF5959;
+    }
+
+    .container__content {
+      position: relative;
+    }
 
 
     body {
@@ -95,7 +113,7 @@
     }
 
     .top-menu__menu {                                    /*Menu*/
-      background-color: #FF5959;
+      /* background-color: #FF5959; */
       max-width: 450px;
     }
 
@@ -103,6 +121,24 @@
           padding-right: 30px;
           padding-left: 50px;
           /*icono-search*/
+    }
+
+    .search__input-wrap {
+      position: relative;
+
+    }
+
+    .search__input {
+      padding-left: 20px;
+    }
+
+    .search__icon {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      border: 2px solid red;
     }
 
     .search__submit {
@@ -208,7 +244,7 @@
       max-width: 450px;
       padding-right: 70px;
       padding: 60px;
-      background-color: blue;
+      /* background-color: blue; */
       font-size: 0.75em;
     }
 
@@ -289,7 +325,7 @@
 
     .social-web {                                /*social web*/
       color: white;
-      background-color: #FF5959;
+      /* background-color: #FF5959; */
     }
 
     .social-web__item {
@@ -308,79 +344,84 @@
 
   <body>
     <div class="container">
-      <nav class="top-menu flex">
-        <div class="top-menu__logo">
-          <a class="logo" href="/"><img src="bugicon.png" alt="INSECT" class="logo__img"></a><div class="top-menu__logo__text">INSECT</div>
-        </div>
-        <div class="top-menu__search">
-          <form action="search" class="search" method="get">
-            <input name="search" onkeyup="document.getElementById('search').className = 'search__submit'" placeholder="Search" type="search" />
-            <input class="search__submit search__submit_hidden" id="search" type="submit" />
-          </form>
-        </div>
-        <div class="top-menu__menu">
-          <ul class="menu">
-            <li class="menu__item menu__item__text"><a href="#">Home</a></li>
-            <li class="menu__item menu__item__text menu__item__selected"><span>Shop</span></li>
-            <li class="menu__item menu__item__text"><a href="#">About</a></li>
-            <li class="menu__item menu__item__cart"><a href="#" class=icono-cart></a></li>
+      <div class="container__content">
+        <nav class="top-menu flex">
+          <div class="top-menu__logo">
+            <a class="logo" href="/"><img src="bugicon.png" alt="INSECT" class="logo__img"></a><div class="top-menu__logo__text">INSECT</div>
+          </div>
+          <div class="top-menu__search">
+            <form action="search" class="search" method="get">
+             <div class="search__input-wrap">
+               <div class="search__icon"></div>
+              <input name="search"  class="search__input" onkeyup="document.getElementById('search').className = 'search__submit'" placeholder="Search" type="search" />
+             </div>
+               <input class="search__submit search__submit_hidden" id="search" type="submit" />
+            </form>
+          </div>
+          <div class="top-menu__menu">
+            <ul class="menu">
+              <li class="menu__item menu__item__text"><a href="#">Home</a></li>
+              <li class="menu__item menu__item__text menu__item__selected"><span>Shop</span></li>
+              <li class="menu__item menu__item__text"><a href="#">About</a></li>
+              <li class="menu__item menu__item__cart"><a href="#" class=icono-cart></a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <article class="columns">
+          <div class="columns__column">
+            <div class="block-name">
+                <h1>Pachyteria equestris</h1>
+                <img src="bugscheme.png" alt="32 mm × 12 mm" class="block-name__img block-name__elements">
+                <dl class="block-name__list block-name__elements">
+                <dt>Locality</dt> <dd>Malaysia</dd>
+                <dt>Sex</dt> <dd>Male</dd>
+                <dt class="block-name__elements__price">Price</dt><dd class="block-name__elements__amount">$5.99</dd>
+                </dl>
+
+              <span class="counter-button">
+              <button class="counter-button__button">&minus;</button>
+              1
+              <button class="counter-button__button">+</button></span>
+
+              <button class="add-basket">Add to cart</button>
+            </div>
+          </div>
+
+          <div class="columns__column">
+            <div class="block-pic">
+              <img src="bug.png" alt="big red & blue bug">
+            </div>
+          </div>
+          <div class="columns__column">
+            <div class="block-classification">
+              <h2 class="block-classification__heading">Classification</h2>
+              <dl class="block-classification__elements">
+                <dt>Class</dt>
+                <dd>Insecta</dd>
+                <dt>Order</dt>
+                <dd>Coleoptera</dd>
+                <dt>Family</dt>
+                <dd>Cerambicydae</dd>
+                <dt>Subfamily</dt>
+                <dd>Cerambicynae</dd>
+                <dt>Tribe</dt>
+                <dd>Callichromatini</dd>
+                <dt>Genus</dt>
+                <dd>Pachyteria</dd>
+              </dl>
+            </div>
+          </div>
+        </article>
+
+        <div align=right><ul class="social-web">
+          <li class="social-web__item"><a href="http://pageonfacebook.com" class="icono-facebook"></a></li>
+
+          <li class="social-web__item"><a href="http://pageontwitter.com" class="icono-twitter"></a></li>
+
+          <li class="social-web__item"><a href="http://pageoninstagram.com" class="icono-instagram"></a></li>
           </ul>
         </div>
-      </nav>
-
-      <article class="columns">
-        <div class="columns__column">
-          <div class="block-name">
-              <h1>Pachyteria equestris</h1>
-              <img src="bugscheme.png" alt="32 mm × 12 mm" class="block-name__img block-name__elements">
-              <dl class="block-name__list block-name__elements">
-              <dt>Locality</dt> <dd>Malaysia</dd>
-              <dt>Sex</dt> <dd>Male</dd>
-              <dt class="block-name__elements__price">Price</dt><dd class="block-name__elements__amount">$5.99</dd>
-              </dl>
-
-            <span class="counter-button">
-            <button class="counter-button__button">&minus;</button>
-            1
-            <button class="counter-button__button">+</button></span>
-
-            <button class="add-basket">Add to cart</button>
-          </div>
-        </div>
-
-        <div class="columns__column">
-          <div class="block-pic">
-            <img src="bug.png" alt="big red & blue bug">
-          </div>
-        </div>
-        <div class="columns__column">
-          <div class="block-classification">
-            <h2 class="block-classification__heading">Classification</h2>
-            <dl class="block-classification__elements">
-              <dt>Class</dt>
-              <dd>Insecta</dd>
-              <dt>Order</dt>
-              <dd>Coleoptera</dd>
-              <dt>Family</dt>
-              <dd>Cerambicydae</dd>
-              <dt>Subfamily</dt>
-              <dd>Cerambicynae</dd>
-              <dt>Tribe</dt>
-              <dd>Callichromatini</dd>
-              <dt>Genus</dt>
-              <dd>Pachyteria</dd>
-            </dl>
-          </div>
-        </div>
-      </article>
-
-      <div align=right><ul class="social-web">
-        <li class="social-web__item"><a href="http://pageonfacebook.com" class="icono-facebook"></a></li>
-
-        <li class="social-web__item"><a href="http://pageontwitter.com" class="icono-twitter"></a></li>
-
-        <li class="social-web__item"><a href="http://pageoninstagram.com" class="icono-instagram"></a></li>
-        </ul>
       </div>
     </div> <!-- container -->
   </body>

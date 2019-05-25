@@ -1,11 +1,11 @@
-<!doctype html>
+<!-- <!doctype html> -->
 <html>
   <head>
     <title>Shop</title>
-    <!--
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Suranna&display=swap" rel="stylesheet">
-  -->
+
+    <!--<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Suranna&display=swap" rel="stylesheet"> -->
+
     <link href="normalize.css" rel="stylesheet">
     <link href="icono.min.css" rel="stylesheet">
     <style>
@@ -32,23 +32,24 @@
     .container {
           max-width: 900px;
           margin: 0 auto;
-          background-color: #FF5959;
-          padding: 20px;
+          background-color: grey;
+          padding: 0;
           padding-top: 0;
           position: relative;
           z-index: 1;
         }
 
+
     body {
           padding: 50px;
-          background-color: black;
+          background-color: #EBB174; /*beige*/
           position: relative;
         }
 
     body:before {
           content: '';
           display: block;
-          background-color: green;
+          background-color: #FF5959; /*red*/
           width: 25%;
           height: 50%;
           left: 0;
@@ -59,7 +60,7 @@
     body:after {
           content: '';
           display: block;
-          background-color: blue;
+          background-color: #2C6B67; /*blue*/
           width: 50%;
           height: 100%;
           left: 50%;
@@ -77,12 +78,30 @@
     }
 
     .top-menu__logo, .top-menu__search {
-        margin-top: 30px;
+        padding-top: 20px;
+    }
+
+    .top-menu__logo {                                 /*logo INSECT*/
+        background-color: #2C6B67;
+        padding-bottom: 20px;
+        padding-left: 0;
+        padding-right: 0;
+        width: 225px;
+    }
+
+    .top-menu__search {                                /*Search*/
+      background-color: white;
+      max-width: 225px;
+    }
+
+    .top-menu__menu {                                    /*Menu*/
+      background-color: #FF5959;
+      max-width: 450px;
     }
 
     .search {
-          padding-right: 80px;
-          padding-left: 90px;
+          padding-right: 30px;
+          padding-left: 50px;
           /*icono-search*/
     }
 
@@ -94,7 +113,7 @@
           display: none;
     }
 
-    .top-menu__logo__text {
+    .top-menu__logo__text {                              /*INSECT*/
           color: white;
           font-weight: bold;
     }
@@ -110,7 +129,7 @@
     }
 
     .menu__item__text {
-      padding: 30px;
+      padding: 20px;
       font-size: 0.6em;
       letter-spacing: 0.1em;
     }
@@ -140,8 +159,9 @@
       background: violet;
     }
 
-    .menu__item__cart {
-      padding-left: 40px;
+    .menu__item__cart {                             /*icono-cart*/
+      padding-left: 60px;
+      padding-right: 20px;
     }
 
     .counter-button {
@@ -178,17 +198,18 @@
       width: 20px;
       height: 20px;
       background-color: white;
-      background-image: url(https://placekitten.com/20/20);
+      background-image: url(); /*здесь был котик, а нужна icono-cart*/
       border-radius: 50%;
       vertical-align: middle;
     }
 
-    .block-name {
+    .block-name {                              /*Pachyteria*/
       color: white;
-      max-width: 100%;
-      padding: 20px;
+      max-width: 450px;
+      padding-right: 70px;
+      padding: 60px;
+      background-color: blue;
       font-size: 0.75em;
-      margin-right: -120px; /*так ли это надо???*/
     }
 
     .block-name dt {
@@ -212,7 +233,7 @@
       }
 
     .block-name__elements__price {
-      color: #FF5959;
+      display: none;
       margin-left: 0;
       }
 
@@ -229,16 +250,17 @@
       content:":";
     }
 
-    .block-pic {
-      max-width: 50%; /*так ли это надо???*/
+    .block-pic {                                   /* big bug picture*/
+      max-width: 225px; /*так ли это надо?*/
       padding: 20px;
+      padding-top: 100px;
     }
 
-    .block-classification {
+    .block-classification {                        /*classification*/
       position: relative;
       padding-left: 50px;
-      max-width: 50%; /*так ли это надо???*/
-      padding: 20px;
+      max-width: 225px; /*так ли это надо?*/
+      padding: 50px;
       font-size: 1.1em;
       color: #3F403F;
     }
@@ -247,15 +269,15 @@
       content:":";
     }
 
-    .block-classification__heading {
+    .block-classification__heading {            /*classification heading*/
       transform-origin: left;
       transform: rotate(270deg) translate(-100%, 0);
       text-shadow: white -1px 0 0, white 1px 0 0, white 0 1px 0, white 0 -1px 0 ;
-      color: #FF5959;
+      color: grey;
       font-size: 1.8em;
       position: absolute;
       letter-spacing: 0.2em;
-      left: -70%;
+      left: 0;
       top: -12%;
       padding: 20px;
     }
@@ -265,8 +287,9 @@
       margin-left: 0;
     }
 
-    .social-web {
+    .social-web {                                /*social web*/
       color: white;
+      background-color: #FF5959;
     }
 
     .social-web__item {

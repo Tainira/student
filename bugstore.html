@@ -5,7 +5,6 @@
     <title>Shop</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Suranna&display=swap" rel="stylesheet">
-
     <link href="normalize.css" rel="stylesheet">
     <link href="icono.min.css" rel="stylesheet">
     <style>
@@ -33,6 +32,7 @@
           padding-top: 0;
           position: relative;
           z-index: 1;
+          box-shadow: 0 25px 20px -20px #3b3939;
         }
 
     .container::before {
@@ -65,7 +65,7 @@
           content: '';
           display: block;
           background-color: #FF5959; /*red*/
-          width: 27%;
+          width: 32%;
           height: 50%;
           left: 0;
           top: 0;
@@ -112,18 +112,15 @@
 
     .top-menu__search {                                /*Search*/
       background-color: white;
-      max-width: 300px;
       min-width: 250px;
     }
 
     .top-menu__menu {                                    /*Menu*/
-      max-width: 500px;
       min-width: 500px;
       margin-left: 50px;
     }
 
     .search {
-      padding-right: 20px;
       padding-left: 20px;
     }
 
@@ -207,13 +204,12 @@
     }
 
     .menu__item__cart {                             /*icono-cart*/
-      padding-left: 0px;
-      padding-right: 20px;
+
     }
 
     .menu__item__cart::after {
       content: url('https://api.iconify.design/uil:cart.svg?color=%232C6B67&height=17');
-      margin-left: 15px;
+      margin-left: 50px;
       display: inline-block;
       width: 20px;
       height: 20px;
@@ -277,6 +273,7 @@
       font-size: 0.75em;
       position: relative;
       margin-right: -45px;
+      line-height: 1.5em;
     }
 
     .block-name dt {
@@ -289,6 +286,7 @@
 
     .block-name__elements dd {
       margin-left: 0;
+
       }
 
     .block-name__elements {
@@ -407,7 +405,7 @@
               <li class="menu__item menu__item__text"><a href="#">Home</a></li>
               <li class="menu__item menu__item__text menu__item__selected"><span>Shop</span></li>
               <li class="menu__item menu__item__text"><a href="#">About</a></li>
-              <li class="menu__item menu__item__cart"><a href="#"></a></li>
+              <li class="menu__item menu__item__cart"></li>
             </ul>
           </div>
         </nav>

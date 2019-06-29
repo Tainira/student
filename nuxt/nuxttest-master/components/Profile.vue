@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <a href="#">profile</a>
+    <a href="#"><i class="fas fa-user-circle"></i></a>
   </div>
 </template>
 

@@ -1,14 +1,13 @@
 <template>
-  <div class="container">
-    <a href="#">check</a>
-  </div>
+  <button @click="$emit('click', $event)">
+    <span v-if="full">{{ text }}</span> ->
+  </button>
 </template>
 
 <script>
-<style scoped>
-.container {
-  width: 30%;
-  background-color: yellow;
+export default {
+  props: ['full', 'text']
 }
-</style>
 </script>
+
+<style scoped></style>

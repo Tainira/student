@@ -8,9 +8,9 @@
     <img :src="avatar" />
     <div>{{ name }}</div>
     <div>{{ price }}</div>
-    <ul>
-      <li v-for="(photo, index) in photos" :key="index">
-        <img :src="photo" />
+    <ul class="images">
+      <li v-for="(photo, index) in photos" :key="index" class="images-item">
+        <img :src="photo" class="image" />
       </li>
     </ul>
   </div>
@@ -35,5 +35,19 @@ export default {
 .order_white {
   background-color: white;
   color: black;
+}
+
+.images {
+  margin: 0;
+  padding: 0;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+}
+
+.images-item {
+  display: block;
 }
 </style>

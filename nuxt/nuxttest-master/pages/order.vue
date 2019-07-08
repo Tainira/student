@@ -2,17 +2,21 @@
   <div>
     <h1 class="name"><strong>Split</strong> order</h1>
     <Menu :items="items" />
-    <ul class="orders-list">
-      <li
-        v-for="(order, index) in orders"
-        :key="order.name"
-        class="orders-item"
-      >
-        <Order v-bind="order" :white="index > 0" />
-      </li>
-    </ul>
-    <Profile />
-    <PlaceOrder :full="full" text="Set reminder" @click="full = !full" />
+    <div class="user-order">
+      <ul class="orders-list">
+        <li
+          v-for="(order, index) in orders"
+          :key="order.name"
+          class="orders-item"
+        >
+          <Order v-bind="order" :white="index > 0" />
+        </li>
+        <li class="orders-item"><Profile /></li>
+      </ul>
+      <div class="place-order">
+        <PlaceOrder :full="full" text="Set reminder" @click="full = !full" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -90,6 +94,27 @@ export default {
 .orders-item {
   display: inline-block;
   vertical-align: top;
-  margin: 0 20px;
+  margin: 0 5%;
+  width: 20%;
+}
+
+.orders-item:last-child {
+  margin-right: 0;
+}
+
+.orders-list {
+  padding: 0;
+  margin: 0;
+  text-align: right;
+}
+
+.user-order {
+  position: relative;
+}
+
+.place-order {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 </style>

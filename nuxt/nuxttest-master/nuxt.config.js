@@ -16,9 +16,9 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: '/font-awesome/css/font-awesome.min.css' }
+      { rel: 'stylesheet', href: '/favicon.ico' }
     ],
+    script: [{ src: 'https://code.iconify.design/1/1.0.2/iconify.min.js' }]
   },
   /*
    ** Customize the progress-bar color

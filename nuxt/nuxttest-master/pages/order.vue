@@ -1,7 +1,12 @@
 <template>
   <div>
+    <div class="back">
+      <Back />
+    </div>
     <h1 class="name"><strong>Split</strong> order</h1>
-    <Menu :items="items" />
+    <div class="menu">
+      <Menu :items="items" />
+    </div>
     <div class="user-order">
       <ul class="orders-list">
         <li
@@ -25,10 +30,11 @@ import Menu from '~/components/Menu'
 import Order from '~/components/Order'
 import PlaceOrder from '~/components/PlaceOrder'
 import Profile from '~/components/Profile'
+import Back from '~/components/Back'
 
 export default {
   layout: 'orderfood',
-  components: { Menu, Order, PlaceOrder, Profile },
+  components: { Back, Menu, Order, PlaceOrder, Profile },
   data: () => ({
     items: [
       {
@@ -87,8 +93,13 @@ export default {
 </script>
 
 <style scoped>
+.back {
+  padding: 2em;
+}
+
 .name {
   font-weight: normal;
+  padding: 0 1.2em;
 }
 
 .orders-item {
@@ -106,6 +117,12 @@ export default {
   padding: 0;
   margin: 0;
   text-align: right;
+  padding: 2em 0;
+}
+
+.menu {
+  padding: 1em;
+  font-size: 0.7em;
 }
 
 .user-order {
@@ -116,5 +133,6 @@ export default {
   position: absolute;
   right: 0;
   bottom: 0;
+  padding: 2em 0;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <button @click="$emit('click', $event)">
+  <button class="button" @click="$emit('click', $event)">
     <span v-if="full">{{ text }}</span> ->
   </button>
 </template>
@@ -10,4 +10,12 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.button {
+  background-color: #ebc749;
+  padding: 1.8em;
+  border-radius: 10px 0 0 10px;
+  text-align: center;
+  box-shadow: 0 0 20px grey;
+}
+</style>

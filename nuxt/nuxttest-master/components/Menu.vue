@@ -22,6 +22,9 @@ export default {
 .table {
   width: 100%;
 }
+.pic {
+  max-width: 30%;
+}
 .price {
   color: grey;
 }

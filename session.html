@@ -4,42 +4,57 @@
     <link href="https://fonts.googleapis.com/css?family=Literata:400,400i,700&display=swap" rel="stylesheet">
     <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
     <style>
+
       body {
         font-family: 'Literata', serif;
-        background-color: beige;
+        background: white url(/sessionimage.svg) bottom no-repeat; /*https://svgshare.com/i/EQz.svg */
+        background-size: 100%;
       }
 
       .container {
         position: relative;
-        max-width: 1200px;
-        margin: 50 auto;
-        padding: 50px;
-        border: solid 1px black;
+        max-width: 1000px;
+        margin: 30px auto;
+        padding: 45px;
+        background: rgba(255, 255, 247, 0.9);
+        box-shadow: 0 0 5px #FFFFF7;
       }
 
-      .top-menu__menu {
-        background-color: #A5C746;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-      }
-
-      .top-menu__item {
-        display: inline-block;
-        padding: 0 3em;
-        border: solid 1px black;
-      }
-
-      .top-menu__item a:link {
+      a {
         color: #3B260D;
+      }
+
+      a:visited {
+        color: black;
       }
 
       h1 {
         text-transform: uppercase;
+        color: #3B260D;
+      }
+
+      h2 {
+        text-align: center;
+        color: #3B260D;
+        font-size: 1.4em;
       }
 
       p {
-        font-size: 1.4em;
+        font-size: 1.2em;
+        vertical-align: middle;
+        padding: 1em 0;
+      }
+
+      .top-menu {
+        text-align: center;
+      }
+
+      .top-menu__item {
+        background-color: #B3CC66;
+        display: inline-block;
+        padding: 0 3em;
+        border: solid 1px black;
+        margin: 0;
       }
 
       .annonce {
@@ -47,61 +62,55 @@
         padding: 40px;
       }
 
-      .annonce_elem {
+      .annonce__elem {
         display: inline-block;
         vertical-align: top;
         padding: 30px;
       }
 
-      .cellar {
-        text-align: center;
-      }
-
-      .cellar__element {
+      .footer__element {
         display: inline-block;
-        padding: 0 5em;
+        padding: 0 10em;
+        vertical-align: top;
       }
 
     </style>
   </head>
   <body>
     <div class="container">
-      <div class="top-menu">
+      <nav class="top-menu">
         <ul class="top-menu__menu">
           <li class="top-menu__item"><a href="#">Сейшн</a></li>
           <li class="top-menu__item"><a href="#/faq">Правила</a></li>
           <li class="top-menu__item"><a href="#/tunes">Что играем</a></li>
           <li class="top-menu__item"><a href="#/media">Как звучит</a></li>
-          <li class="top-menu__item"><a href="#/links">Полезные ссылки</a></li>
           <li class="top-menu__item"><a href="english.#.ru"><span class="iconify" data-icon="fxemoji:greatbritainflag" data-inline="false"></span> English</a></li>
         </ul>
-      </div>
+      </nav>
       <div class="annonce">
         <h1>Следующий сейшн</h1>
-        <div class="annonce__text annonce_elem">
-          <p>22 июля 2019 года в пабе Paddy's</p>
+        <div class="annonce__elem">
+          <p><time>5 августа 2019 года в 20:00</time><br>в пабе Paddy's</p>
           <p>Адрес: Бутырский вал, 2<br>(метро "Белорусская")</p>
         </div>
-        <div class="annonce__map annonce_elem">
+        <div class="annonce__elem">
           <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A17582f50dad55bf366a8af89400429b88a03b69cd52d0f516ca98ded6daac0a3&amp;width=400&amp;height=300&amp;lang=ru_RU&amp;scroll=true"></script>
         </div>
       </div>
-      <div class="cellar">
-        <div class="cellar__element">
-          <p class="small-heading">Другие сейшны</p>
+      <footer>
+        <div class="footer__element">
+          <h2>Другие сейшны</h2>
             <ul>
               <li><a href="https://vk.com/moscow_folk_sessions">Ирландский в Вермеле</a></li>
               <li><a href="https://vk.com/boeuftradamoscou">Французская музыка</a></li>
             </ul>
         </div>
-        <div class="cellar__element">
-          <p class="small-heading">Связь</p>
+        <div class="footer__element">
+          <h2>Связь</h2>
             <ul>
               <li><a href="vk.com/irishtrad_session"><span class="iconify" data-icon="simple-line-icons:social-vkontakte" data-inline="false"></span></a></li>
-              <li><span class="iconify" data-icon="uil:telegram-alt" data-inline="false"></span><span> - tainia</span></li>
-            </ul>
         </div>
-      </div>
+      </footer>
     </div> <!-- container -->
   </body>
 </html>

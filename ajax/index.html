@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            var button = $(".js-button");
+            var counter = 0;
+            var showCounter = $(".js-counter");
+            var $html = $(".js-html").hide();
+
+            setTimeout(function(){
+                button.css({color: "red"});
+                }, 2000);
+
+
+            button
+                .click(function(){
+                 //   alert("Hello!");
+                })
+                .on("click", function(){
+                 //   alert("How are you?");
+                })
+                .click(function(){
+                    counter +=1;
+                    showCounter.text(counter);
+                })
+                .click(function () {
+                    $.getJSON("data.json", function(data){
+                        console.log(data.success);
+                        $(".js-result").text(data.success);
+                    })
+                })
+                .click(function () {
+                    $.get("data.html", function (html) {
+                        $html.html(html).fadeIn(5000);
+                    })
+                })
+                .click(function () {
+                    $.get("http://localhost:1337/whiskey", function (whiskey) {
+                        var list = $('<ul>');
+
+                        whiskey.forEach(function(bottle) {
+                           var item = $('<li>');
+
+                           item.text(bottle.name + ' ' + bottle.price + ' руб.');
+
+                           list.append(item);
+                        });
+
+                        $('.js-whiskey').append(list);
+                    }).fail(function () {
+                        alert('Все сломалось');
+                    })
+                })
+        });
+    </script>
+    <meta charset="UTF-8">
+    <title>New page</title>
+</head>
+<body>
+<button class="js-button">Some text</button>
+<span class="js-counter"></span>
+<p class="js-result"></p>
+<div class="js-html"></div>
+<div class="js-whiskey"></div>
+</body>
+</html>
